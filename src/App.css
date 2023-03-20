@@ -1,0 +1,159 @@
+*{
+  color:rgb(66, 64, 64);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.App {
+  display :flex;
+  flex-direction: row;
+  height: 85vh;
+  width: 100%;
+  align-items: center;
+  justify-content:flex-start;
+  background-image:linear-gradient(79deg, #fcfced, #bcf7f2,48%, #41b9fe);
+}
+
+.auth-form-container ,.login-form, .register-form{
+  margin-right:10%;
+  margin-left: 10%;
+  display : flex;
+  width:60%;
+  flex-direction: column;
+  align-items: center;
+}
+.auth-form-container{
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(0, 0, 0, 0.258);
+  border-radius: 12px;
+  padding-top : 50px;
+  padding-bottom: 50px;;
+  border: 2px solid rgba(209, 213, 219, 0.3);
+}
+
+label {
+  text-align: left;
+  padding : 0.25rem 0rem;
+  height: 1.5rem;
+  font-size: 1.3rem;
+}
+input{
+  margin : 0.5rem 0rem;
+  height: 2.4rem;
+  font-size: 1.3rem;
+  padding-left:10px;
+}
+button{
+  border :none;
+  width : 80%;
+  background-color: white;
+  padding :20px;
+  border-radius: 30px;
+}
+.forgot{
+  background: none;
+  text-align: left;
+  text-decoration: underline;
+  padding : 0.25rem 0rem;
+  margin-left: 3rem;
+  height: 1.5rem;
+  font-size: 1rem;
+  color:white;
+  padding :20px;
+  border-radius: 30px;
+}
+.submit{
+  font-size: large;
+  border-style: solid;
+  background-color: seagreen;
+  color:white;
+}
+.submit:hover{
+  background-color: #bcf7f2;
+}
+button:hover{
+  color: rgb(66, 64, 64);
+  cursor: pointer;
+}
+.linkButton{
+  padding-right: 10%;
+  margin-left: 10%;
+  font-size: 1.3rem;
+  background: none;
+  color:white;
+  text-decoration: underline;
+}
+.HeadLine{
+  margin-top: 3vh;
+ height : 12vh;
+}
+/* #body-container{
+  display:flex;
+  flex-direction: row;
+  width: 100%;
+} */
+.SideNavBar{
+  display:flex;
+  flex-direction: column;
+  height: 85vh;
+  width: 20%;
+  position :relative;
+  background-color: #31C48D ;
+  align-items: left;
+  text-align: left;
+}
+.navH{
+  font-size: 1.5em;
+  padding: 4vh 8vh;
+  background: none;
+  color:#ffffff;
+  text-decoration: underline;
+}
+
+#Cart{
+  margin-left: 8vh;
+  background: none;
+  background-image: url("./images/cart.webp");
+  background-size:contain;
+  background-repeat: no-repeat;
+  transition: rotate 0.4s;
+  width : 16%;
+}
+#Cart:hover{
+  rotate : 45deg;
+  transition: rotate 0.2s;
+}
+#settings{
+  margin-top:2vh;
+  margin-left: 8vh;
+  background: none;
+  background-image: url("./images/settings.png");
+  background-size:contain;
+  background-repeat: no-repeat;
+  transition: rotate 0.6s;
+  width : 10%;
+}
+#settings:hover{
+  rotate : 180deg;
+  transition: rotate 3s;
+}
+#Log{
+  margin-left: 8vh;
+  padding-left: 0;
+  text-align: left;
+  width:50%;
+}
+.check{
+  margin-left: 8vh;
+}
+.check > label{
+  margin-left: 2vh;
+}
+.check > input{
+  width: 3vh;
+}
+.KickBall{
+  width:40%;
+  height:70vh;
+}
+
