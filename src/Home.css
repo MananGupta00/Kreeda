@@ -1,0 +1,130 @@
+/* Home page css implementation by Manan Gupta
+*/
+
+.slider {
+  width: 1000px;
+  height: 300px;
+  top:0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.image-container {
+  width: 2000px;
+  height: 300px;
+  clear: both;
+  position: relative;
+  -webkit-transition: left 2s;
+  -moz-transition: left 2s;
+  -o-transition: left 2s;
+  transition: left 2s;
+  box-shadow:
+  inset 0 0 0 4px #eee,
+  inset 0 0 0 8px #dddddd75,
+  inset 0 0 0 12px #cccccc50,
+  inset 0 0 0 16px #bbbbbb4d,
+  inset 0 0 0 20px #aaaaaa51,
+  inset 0 0 0 20px #9999994d,
+  inset 0 0 0 20px #8888883f;
+}
+
+.slide {
+  float: left;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  background-size: 100%;
+  
+}
+.slide1{
+  background-image: url("./images/cricket_slide.jpg");
+}
+.slide2{
+  background-image: url("./images/football_slide.jpg");
+}
+.slide3{
+  background-image: url("./images/sports_slide.jpg");
+}
+slide4{
+  background-image: url("./images/cricket_slide.jpg");
+}
+#slide-1:target ~ .image-container {
+  left: 0px;
+}
+#slide-2:target ~ .image-container {
+  left: -500px;
+}
+#slide-3:target ~ .image-container {
+  left: -1000px;
+}
+.buttons {
+  position: relative;
+  top: -20px;
+}
+.buttons a {
+  display: inline-block;
+  color: white;
+  margin-left:5px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50px;
+  background-color: lightgreen;
+}
+.Home{
+  margin-left:20%;
+  position : absolute;
+  margin-top: 20vh;
+
+}
+.products{
+  margin-top: 15vh;
+  width : 100%;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
+  background-color: #eeeeeea3;
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.card > a{
+  max-width :100%;
+  max-height: 300px !important;
+}
+.card > img{
+  max-width :100%;
+  max-height: 300px;
+
+}
+.price {
+  color: rgb(255, 255, 255);
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+.prodRow{
+  margin-top: 10px;
+  margin-bottom : 40px;
+  display:flex;
+  flex-direction: row;
+}

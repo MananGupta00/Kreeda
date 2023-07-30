@@ -1,30 +1,73 @@
+/* CSS file for the customer website view */
+/* By-Manan Gupta, 2022IS06 MNNIT */
+/* This file only contains the code for styling html tags on the page */
+
+
+
 *{
+  /* wildcard tag applies properties to the whole heirarchy in DOM */
   color:rgb(66, 64, 64);
   font-family: Georgia, 'Times New Roman', Times, serif;
+  transition: fade-in 0.4s;
 }
+
+
+body{
+  /* To change background display of body tag to football ground image */
+  background-image: url("./images/bgGround.jpg");
+  background-size: 100%;
+  overflow-y: scroll;
+}
+
 
 .App {
-  display :flex;
-  flex-direction: row;
+  position: relative;
+  /* Content sub section of the body */
+  display :block;
+  /* Created a box structure to place items in center */
   height: 85vh;
+  min-height: 500px;
+  /* Will avoid breaking the app display on resizing */
   width: 100%;
   align-items: center;
+  /* flex start is from left */
   justify-content:flex-start;
-  background-image:linear-gradient(79deg, #fcfced, #bcf7f2,48%, #41b9fe);
+  top: 0px;
 }
 
-.auth-form-container ,.login-form, .register-form{
-  margin-right:10%;
-  margin-left: 10%;
+
+
+.auth-form-container ,.login-form, .register-form,.cart-form-container{
+  /* All 3 classes shall have following properties
+      */
+  width:30%;
   display : flex;
-  width:60%;
   flex-direction: column;
   align-items: center;
 }
+
+
 .auth-form-container{
+  margin-right:10%;
+  margin-left: 40%;
+  margin-top : 30vh;
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
   background-color: rgba(0, 0, 0, 0.258);
+  border-radius: 12px;
+  padding-top : 50px;
+  padding-bottom: 50px;;
+  border: 2px solid rgba(209, 213, 219, 0.3);
+}
+
+.cart-form-container{
+  margin-right:10%;
+  margin-left: 30%;
+  margin-top : 30vh;
+  min-width:50%;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(117, 255, 37, 0.229);
   border-radius: 12px;
   padding-top : 50px;
   padding-bottom: 50px;;
@@ -37,12 +80,17 @@ label {
   height: 1.5rem;
   font-size: 1.3rem;
 }
+
+
 input{
   margin : 0.5rem 0rem;
   height: 2.4rem;
   font-size: 1.3rem;
   padding-left:10px;
+  border-radius: 10px;;
 }
+
+
 button{
   border :none;
   width : 80%;
@@ -50,58 +98,92 @@ button{
   padding :20px;
   border-radius: 30px;
 }
+
+
+
+
+
 .forgot{
   background: none;
   text-align: left;
-  text-decoration: underline;
-  padding : 0.25rem 0rem;
-  margin-left: 3rem;
-  height: 1.5rem;
+  margin-left: 1rem;
   font-size: 1rem;
   color:white;
   padding :20px;
   border-radius: 30px;
+  width:200px;
 }
+
+
 .submit{
-  font-size: large;
+  font-size: 20px;
+  padding-top:10px;
+  padding-bottom: 15px;
+  width:200px;
+  margin-left: -30px;
+  height:45px;
   border-style: solid;
   background-color: seagreen;
   color:white;
 }
+
+
 .submit:hover{
-  background-color: #bcf7f2;
+  width : 220px;
+  background-color: rgba(46, 139, 86, 0.714);
 }
+
+
 button:hover{
-  color: rgb(66, 64, 64);
+  text-decoration: underline;
   cursor: pointer;
 }
+
+
+
+/* button which will change state of form */
+
 .linkButton{
   padding-right: 10%;
-  margin-left: 10%;
+  margin-left: 0%;
   font-size: 1.3rem;
   background: none;
   color:white;
-  text-decoration: underline;
 }
+
+
 .HeadLine{
-  margin-top: 3vh;
+ background-color: #89d18f38;
  height : 12vh;
+ width:90%;
+
+ position:fixed;
+ top:0;
+ padding-left:40%;
+ z-index:1;
 }
+
+
 /* #body-container{
   display:flex;
   flex-direction: row;
   width: 100%;
-} */
+}
+
+*/
 .SideNavBar{
+  top :0;
   display:flex;
   flex-direction: column;
-  height: 85vh;
-  width: 20%;
-  position :relative;
-  background-color: #31C48D ;
+  height: 100vh;
+  width: 15vw;
+  position : fixed;
+  background-color: #31c48e99 ;
   align-items: left;
   text-align: left;
 }
+
+
 .navH{
   font-size: 1.5em;
   padding: 4vh 8vh;
@@ -109,6 +191,8 @@ button:hover{
   color:#ffffff;
   text-decoration: underline;
 }
+
+
 
 #Cart{
   margin-left: 8vh;
@@ -118,42 +202,147 @@ button:hover{
   background-repeat: no-repeat;
   transition: rotate 0.4s;
   width : 16%;
+  background-color: #1d684d76;
 }
+
+
 #Cart:hover{
   rotate : 45deg;
   transition: rotate 0.2s;
 }
+
+
 #settings{
   margin-top:2vh;
   margin-left: 8vh;
-  background: none;
+  background-color: #1d684d76;
   background-image: url("./images/settings.png");
   background-size:contain;
   background-repeat: no-repeat;
   transition: rotate 0.6s;
   width : 10%;
 }
+
+
 #settings:hover{
   rotate : 180deg;
   transition: rotate 3s;
 }
+
+
 #Log{
   margin-left: 8vh;
   padding-left: 0;
   text-align: left;
   width:50%;
 }
+
+
 .check{
   margin-left: 8vh;
+  position:relative;
 }
+
+
 .check > label{
-  margin-left: 2vh;
+  position: absolute;
+  top: 12px;
+  margin-left: 1vw;
+  color: #fff;
 }
+
+
 .check > input{
-  width: 3vh;
+  width: 1vw;
 }
+
+
 .KickBall{
   width:40%;
   height:70vh;
+}
+
+
+#invalid{
+  text-decoration:underline;
+  opacity: 0;
+  border: 2px solid rgba(174, 17, 62);
+  font-weight: bold;
+  color:rgb(255, 252, 252);
+  font-size: 14px;
+  width:15vw;
+}
+
+
+
+#WatchLive{
+  background-color: #7bfe53d0;
+  margin-left:20px;
+  margin-top:10vh;
+  margin-bottom:5vh;
+  font-size: 20px;
+}
+
+
+
+#WatchLive:hover{
+  background-color:  #7bfe5382;
+  text-decoration: none;;
+}
+
+
+
+.video-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+
+
+.video-responsive iframe {
+  border: solid 2px black;
+  border-radius: 10px;
+  left: 30%;
+  top:20%;
+  height: 50%;
+  width: 50%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.445);
+}
+
+
+.add_product{
+  padding-left: 5vw;
+}
+
+#Sell{
+  background-color: #7bfe53d0;
+  margin-left:20px;
+  margin-top:40px;
+  font-size: 20px;
+}
+
+
+
+#Sell:hover{
+  background-color:  #7bfe5382;
+  text-decoration: none;;
+}
+
+/* All the text areas in website will have these properties */
+textarea{
+  min-width:300px;
+  min-height:50px;
+  border-radius:5px;
+  border : 1px black solid;
+}
+
+
+.seller_field{
+  min-width:290px;
+  margin-top:15px;
+  margin-bottom:15px;
 }
 

@@ -1,3 +1,5 @@
+/*This code has been reused exactly the same for the implementation of SHA-256, all rights belong to respective author"(s)*/
+
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
 /* SHA-256 (FIPS 180-4) implementation in JavaScript                  (c) Chris Veness 2002-2019  */
 /*                                                                                   MIT Licence  */

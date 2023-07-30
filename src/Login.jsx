@@ -12,6 +12,7 @@ export const Login = (props) => {
         console.log( 'hash',hash );
         setPass(hash);
     }
+
     
     return (
         <>
@@ -23,7 +24,7 @@ export const Login = (props) => {
 
             <input value={pass} onChange = {(b) => setPass(b.target.value)} type="password" placeholder = "Password" id = "PassId" />
            
-            <button className="forgot" onClick = {()=>props.onFormSwitch('Register')}> Forgot Password </button>
+            <button className="forgot" onClick = {()=>props.onFormSwitch('Contact')}> Forgot Password </button>
             <br/>
             <button class='submit'> LOG IN</button>
         </form>
